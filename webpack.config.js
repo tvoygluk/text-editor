@@ -1,5 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackInjector = require('html-webpack-injector')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -87,13 +88,14 @@ const plugins = () => {
                 collapseWhitespace: isProd
             }
         }),
+        new HtmlWebpackInjector(),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/img/favicon.ico'),
                     to: path.resolve(__dirname, 'dist')
-                }
+                },
             ]
         }),
         new MiniCssExtractPlugin({
@@ -109,7 +111,6 @@ module.exports = {
     mode: 'development',
     entry: {
         main: ['@babel/polyfill', './scripts/index.js'],
-        fonts: './scripts/fonts.js'
     },
     output: {
         filename: filename('js'),

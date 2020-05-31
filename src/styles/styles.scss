@@ -1,17 +1,83 @@
 @import "./fonts.scss";
 @import "~normalize.css";
 
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+html {
+    box-sizing: border-box;
+}
+
 body {
-    text-align: center;
-    margin: 10px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 
-    font-family: Verdana, Arial, sans-serif;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
-    font-size: 16px;
+article {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 30px;
+
+    font-family: "Jura", "Arial", sans-serif;
+
+    
+    background-color: rgba(252, 231, 178, 0.482);
+    background-image: url("../img/typewriter@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/typewriter@2x.jpg");
+    }
+
 }
 
 h1 {
-    text-align: center;
-    color: blueviolet;
+    font-size: 40px;
+    padding: 3px 13px 5px 13px;
+    background-color: rgba(196, 196, 196, 0.9);
+    border-radius: 5px;
+    border: 4px solid rgba(0, 0, 0, 0.728);
+
 }
+
+.editorSheet {
+    position: relative;
+    font-size: 30px;
+
+    outline: none;
+
+    width: 80vw;
+
+    min-height: 70vh;
+
+    // margin-left: 7vw;
+
+    border: solid;
+
+    border-width: 0px;
+    border-radius: 3px;
+
+    text-align: left;
+
+    background-color: rgba(28, 28, 28, 0.742);
+
+    box-shadow: 6px 10px 9px 0px rgba(0,0,0,0.75);
+
+    padding: 15px;
+
+    color: honeydew;
+
+  }
