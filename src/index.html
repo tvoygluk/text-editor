@@ -9,11 +9,35 @@
 </head>
 <body>
     <article>
-        <h1>Текстовый редактор с автосохранением</h1>
-
-    <!-- большой блок для ввода текста: высота в половину, а ширина — во весь экран, назвывается "text_area", обведено рамкой толщиной в 1 пиксель, выравнивание текста — по левому краю -->
-
-        <div class="editorSheet" id="editor" contenteditable="true">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Текстовый редактор с автосохранением</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" >
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                    <h2 class="text-light">Документы</h2>
+                    <p class="h6 text-light">Alt + клик — удаляет документ</p>
+                    <div id="tdlApp">
+                        <input type="text" class="form-control" placeholder="Новый документ">
+                        <div class="tdlDiv">
+                            <ul class="List list-unstyled">
+                
+                                <!-- тут появятся наши названия документов, когда мы их добавим -->
+                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9">
+                    <div id="editor" contenteditable="true" class="editorSheet"></div>
+                </div>
+            </div>
+        </div>
     </article>
 </div>
 </body>
