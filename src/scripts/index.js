@@ -1,4 +1,6 @@
-import '../styles/styles.scss'
+import '../styles/styles.scss';
+// import $ from "jquery";
+import '../../node_modules/bootstrap/dist/js/bootstrap.bundle';
 
 const editor = document.getElementById('editor');
 

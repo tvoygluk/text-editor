@@ -1,5 +1,6 @@
 @import "./fonts.scss";
 @import "~normalize.css";
+@import "~bootstrap/scss/bootstrap.scss";
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
@@ -26,7 +27,7 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding-bottom: 30px;
+    padding: 30px;
 
     font-family: "Jura", "Arial", sans-serif;
 
