@@ -1,4 +1,10 @@
 import * as $ from 'jquery';
+// import './orthography';
+
+
+const editor = document.getElementById('editor');
+
+
 
 // const myNumber = 42
 
@@ -33,9 +39,10 @@ let list = $('#tdlApp ul');
 let mask = 'tdl_';
 // тут будем хранить внутренний номер документа, чтобы связать список и текст в редакторе
 let n_store = 0;
-const editor = document.getElementById('editor');
+
 
 $(editor).on('keyup', function() {
+
     // записываем содержимое нашего редактора в хранилище, при этом ячейка связана с текущим документом
 
     localStorage.setItem(n_store.toString() + 'text_in_editor', editor.innerHTML);
